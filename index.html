@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <!--<link rel="stylesheet" href="./style.css">-->
+  <script src="./main.js" defer></script>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="flex-top-box">
+      <div class="flex-item content">
+
+        <div class="top flex-box">
+          <p>In </p>
+          <div><input type="text" value="manila" class="place"></div>
+          <p>it's clear</p>
+        </div>
+
+        <div class="mid flex-box">
+          <div class="condition">
+            <!--<p>Heavy rain</p>-->
+            <img src="./rain.svg">
+          </div>
+          <div class="temp">
+            <p>0°</p>
+            <!--<p>temp</p>-->
+            <p>rainy</p>
+          </div>
+          <div class="details flex-box">
+            <div>
+              <img src="./umbrella.svg">
+              <p class="rain-chance">0</p>
+              <span>%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom flex-box">
+          <div>
+            <img src="./sunny.svg">
+            <p>0°</p>
+            <p>9am</p>
+          </div>
+          <div>
+            <img src="./cloudy.svg">
+            <p>0°</p>
+            <p>12pm</p>
+          </div>
+          <div>
+            <img src="./partially-sunny.svg">
+            <p>0°</p>
+            <p>3pm</p>
+          </div>
+          <div>
+            <img src="./partially-sunny.svg">
+            <p>0°</p>
+            <p>6pm</p>
+          </div>
+        </div>
+
+        <div class="switch">
+          <button class="cel selected">°C</button>
+          <button class="fah">°F</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
