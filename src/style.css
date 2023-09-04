@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+:root {
+  box-sizing: border-box;
+  --main-size: 60rem; /* 30rem=480px */
+  --sub-color: #8d8d8d;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana sans-serif;
+  font-family: 'Quicksand', sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  min-height: 100vh;
+  /*display: flex;*/
+  background-color: #ffffff;
+}
+.container {
+  margin: 0 auto;
+  flex: 0 0 auto;
+  /*background-image: url('./bg.jpg');*/
+  /*use below bg on menu tab*/
+  /*background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4)), url('./bg.jpg');*/
+}
+.flex-top-box {
+  width: min(max(calc(var(--main-size) - 15rem), 100%), calc(var(--main-size)));
+  min-height: calc(var(--main-size) - 15rem);
+  /*border: 0.0625rem solid black;*/
+  background-color: #ffffff;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+}
+.flex-box {
+  /*min-height: 2.5rem;*/
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  /*border: 0.0625rem solid goldenrod;*/
+}
+/*
+for flex let the item that change size
+to set the width of flex container
+**dont set width!
+*/
+.flex-item {
+  flex: 0 0 100%;
+  /*border: 0.0625rem solid goldenrod;*/
+}
+
+.content{
+  padding-top: 8rem;
+  color: var(--sub-color);
+}
+.content p {
+  margin: 0;
+}
+.top, .mid, .bottom, .switch {
+  /*border: 0.0625rem solid black;*/
+  padding: 1.5rem 0;
+}
+
+.top {
+  justify-content: center;
+}
+.top p {
+  text-align: center;
+  font-size: 1.8rem;
+}
+.top > div {
+  max-width: 30rem;
+  padding: 0 1rem;
+  white-space: nowrap;
+}
+.top .place {
+  border: none;
+  border-bottom: 0.1rem solid var(--sub-color);
+  min-width: 3rem;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #111;
+  padding: 0 1rem;
+  display: flex;
+
+  white-space: nowrap;
+  /*text-overflow: ellipsis;*/
+  overflow: hidden;
+}
+.top .place:focus {
+  outline: none;
+}
+
+.mid {
+  text-align: center;
+}
+.mid .condition,
+.mid .temp,
+.mid .details {
+  flex: 1 0 33%;
+}
+.mid .condition img {
+  height: 12rem;
+  object-fit: contain;
+}
+.mid .temp p:nth-child(1) {
+  font-size: 6rem;
+  color: #111;
+}
+.mid .details {
+  font-size: 1.2rem;
+  align-self: center;
+  /*flex: 1 1 33%;*/
+}
+.mid .details img {
+  height: 1.5em;
+  padding: 0 .3em;
+}
+.mid .details p {
+  display: inline;
+  font-size: 2em;
+}
+
+.bottom div {
+  flex: 1 0 25%;
+  text-align: center;
+  font-size: 1rem;
+}
+.bottom img {
+  height: 2rem;
+  object-fit: contain;
+}
+.bottom div img + p{
+  font-size: 2em;
+}
+
+.switch {
+  text-align: center;
+}
+.switch button {
+  padding: 0 .5rem;
+  background-color: transparent;
+  color: var(--sub-color);
+  border: none;
+  font-size: 1rem;
+  border-radius: .1rem;
+  font-family: inherit;
+}
+.switch button:hover {
+  cursor: pointer;
+  /*color: #7287E9;*/
+  /*background-color: #d6d6d6;*/
+  /*font-weight: bold;*/
+}
+.switch .cel {
+  border-right: .1rem solid var(--sub-color);
+}
+.switch .fah {
+  border-left: .1rem solid var(--sub-color);
+}
+.selected {
+  font-weight: bold;
+}
+
+/*
+  test animations
+*/
+p {
+  animation: anim 2s ease-in-out 0s 1;
+}
+@keyframes anim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
